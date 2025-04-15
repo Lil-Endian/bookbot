@@ -16,9 +16,11 @@ def count_letters(book):
     return char_counts
 
 def sort_dict(char_dict):
+    # make a new list to hold dictionary entries for each character and it's count
     char_list = []
     for char, count in char_dict.items():
+        # append a new dictionary entry to the list for each character present; {char: "char", count: "count"}
         char_list.append({"char": char, "count": count})
-
+    # sort the list from most common to least common character
     char_list.sort(reverse=True, key=lambda x: x["count"])
     return char_list
